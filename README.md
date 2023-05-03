@@ -20,3 +20,29 @@ Overview of A1149-221 using ArmPi-FPV, Realsense D405
 - Use MoveIt Setup Assistant to set up robotic model of arm, following tutorial inside Hiwonder thumbdrive
 - Ask for access for 1) create_envt, 2) armpi_fpv_movement project folders
 - Run
+
+### Run
+#### On Armpi-Raspi
+- Set clock time
+- execute alias "set_doggo_master" to change ROS_MASTER_URI
+- execute alias "run_startup" to roslaunch required services
+
+#### On External PC
+- roslaunch armpi_fpv_moveit_config demo.launch
+- rosrun armpi_fpv_movement arm_pick_place_server
+- rosrun alignment alignment_server
+
+### Configuration
+#### System
+
+Components:
+- Dog-Raspi
+- Armpi-Raspi
+- Jetson
+- External PC
+
+Connections:
+- Armpi-Raspi (ubuntu@192.168.123.69) <-LAN-> Dog-Raspi (pi@192.168.123.1)
+- Dog-Raspi (pi@192.168.12.1) <-WiFI-> Jetson (thien@192.168.12.69)
+- Dog-Raspi (pi@192.168.12.1) <-WiFi-> External PC (yourname@192.168.12.xxx)
+
