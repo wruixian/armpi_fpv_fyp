@@ -55,3 +55,26 @@ Connections:
 - Dog-Raspi (pi@192.168.12.1) <-WiFI-> Jetson (thien@192.168.12.69)
 - Dog-Raspi (pi@192.168.12.1) <-WiFi-> External PC (yourname@192.168.12.xxx)
 
+### MoveIt
+#### To launch scene file automatically
+1. Add yourscene.scene to armpi_fpv_moveit_config/config
+2. Inside armpi_fpv_moveit_config/launch/demo.launch, edit argument "scene_file" to yourscene.scene
+
+#### To change planning time
+1. Inside armpi_fpv_moveit_config/launch/trajectory_execution.launch.xml, edit parameters:
+```
+<param name="trajectory_execution/allowed_execution_duration_scaling" value="4.0"/>
+<param name="trajectory_execution/execution_duration_monitoring" value="false"/> <!-- default 1.2 -->
+```
+#### To change joint limits
+1. If joint limits are not changed, cannot open gripper to maximum possible width
+2. Inside armpi_fpv_moveit_config/config/joint_limits.yaml, edit r_joint
+```
+  r_joint:
+    has_velocity_limits: true
+    max_velocity: 5
+    has_acceleration_limits: false
+    max_acceleration: 0
+    max_position: 1.80
+    min_position: -1.80
+```
