@@ -26,11 +26,21 @@ Overview of A1149-221 using ArmPi-FPV, Realsense D405
 - Set clock time
 - execute alias "set_doggo_master" to change ROS_MASTER_URI
 - execute alias "run_startup" to roslaunch required services
+```
+sudo date -s "2023-04-30 23:30"
+set_doggo_master
+run_startup
+```
 
 ### On External PC
-- roslaunch armpi_fpv_moveit_config demo.launch
-- rosrun armpi_fpv_movement arm_pick_place_server
-- rosrun alignment alignment_server
+- Start MoveIt nodes
+- Start armpi_fpv_movement server
+- Start alignment server
+```
+roslaunch armpi_fpv_moveit_config demo.launch
+rosrun armpi_fpv_movement arm_pick_place_server
+rosrun alignment alignment_server
+```
 
 ## Configuration
 ### System
