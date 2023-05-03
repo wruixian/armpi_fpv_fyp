@@ -19,7 +19,7 @@ Overview of A1149-221 using ArmPi-FPV, Realsense D405
 - If Hiwonder thumbdrive cannot be found, obtain source code from raspi of robotic arm under /home/armpi_fpv
 - Use MoveIt Setup Assistant to set up robotic model of arm, following tutorial inside Hiwonder thumbdrive
 - Ask for access for 1) create_envt, 2) armpi_fpv_movement project folders
-- Run
+- Catkin build and pray
 
 ## Run
 ### On Armpi-Raspi
