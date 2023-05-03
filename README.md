@@ -78,3 +78,10 @@ Connections:
     max_position: 1.80
     min_position: -1.80
 ```
+#### To include new objects to pick up
+1. Create .stl CAD model (Autodesk Fusion/ Blender)
+2. Create .pcd Pointcloud model with CloudCompare
+  - Click on Mesh: Edit > Mesh > Sample Points - input number of points (large)
+  - Click on .sampled: Edit > Subsample > Method: Octree - Change subdivision level (yield number of points as close to actual size of pointcloud in implementation)
+  - Click on .subsampled: File > Save to export
+3. Change code in armpi_fpv_movement/arm_pick_place_server > addObject to account for new .pcd object
