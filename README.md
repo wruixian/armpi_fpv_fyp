@@ -85,3 +85,6 @@ Connections:
   - Click on .sampled: Edit > Subsample > Method: Octree - Change subdivision level (yield number of points as close to actual size of pointcloud in implementation)
   - Click on .subsampled: File > Save to export
 3. Change code in armpi_fpv_movement/arm_pick_place_server > addObject to account for new .pcd object
+
+#### To convert between .ply and .pcd
+1. Use pcl-tools pcd2ply
