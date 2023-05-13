@@ -5,7 +5,15 @@ Overview of A1149-221 using ArmPi-FPV, Realsense D405
 
 ### Libraries used
 - MoveIt!
+```
+sudo apt-get install ros-melodic-moveit
+sudo apt-get install ros-melodic-moveit-visual-tools
+```
 - PCL-ROS
+-trac-ik
+```
+sudo apt-get install ros-melodic-trac-ik-kinematics-plugin
+```
 
 ### Procedure
 #### Setting up alignment-prerejective pipeline
